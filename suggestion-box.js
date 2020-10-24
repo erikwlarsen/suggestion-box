@@ -3,7 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const { connectToDb, getRandomSuggestion, addSuggestion } = require('./db');
 const { postMessage, messages } = require('./slack');
-const { SECRET_PASSWORD } = process.env;
+const { SECRET_PASSWORD, PORT } = process.env;
 
 const app = express();
 
@@ -41,5 +41,5 @@ const app = express();
     }
   });
 
-  app.listen(3333);
+  app.listen(PORT);
 })();

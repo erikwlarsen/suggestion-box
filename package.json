@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node suggestion-box.js",
-    "dev": "nodemon suggestion-box.js"
+    "dev": "nodemon suggestion-box.js",
+    "web": "node suggestion-box.js"
   },
   "author": "",
   "license": "ISC",
