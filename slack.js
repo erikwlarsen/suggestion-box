@@ -9,6 +9,7 @@ const messages = {
     blankSuggestion: () => 'Be sure to include a suggestion! Whatever your heart desires!',
     thanks: (userId) => `Thanks for the suggestion <@${userId}>!`,
     oops: () => 'Oh no, looks like something went wrong!',
+    wrongPassword: () => 'Hmm, that\'s not the right password to draw from the suggestion box.',
   },
   public: {
     noSuggestions: (userId) => `<@${userId}> reached into the Suggestion Box, but there are no suggestions left! Alloy is perfect!`,
