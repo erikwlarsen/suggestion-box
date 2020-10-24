@@ -5,7 +5,7 @@ const { connectToDb, getRandomSuggestion, addSuggestion } = require('./db');
 const { postMessage, messages } = require('./slack');
 const { SECRET_PASSWORD, PORT } = process.env;
 
-const asyncHandler = controller => (req, res) => {
+const asyncHandler = controller => async (req, res) => {
   try {
     await controller(req, res);
   } catch (err) {
