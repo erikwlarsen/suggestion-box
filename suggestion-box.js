@@ -27,6 +27,7 @@ const app = express();
   app.use(bodyParser.urlencoded({ extended: true }));
 
   app.post('/suggestion', asyncHandler(async (req, res) => {
+    const userSuggestion = req.body.text;
     if (!userSuggestion) {
       return res.send(messages.private.blankSuggestion());
     }
