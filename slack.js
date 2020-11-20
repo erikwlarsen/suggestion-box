@@ -10,6 +10,9 @@ const messages = {
     thanks: (userId) => `Thanks for the suggestion <@${userId}>!`,
     oops: () => 'Oh no, looks like something went wrong!',
     wrongPassword: () => 'Hmm, that\'s not the right password to draw from the suggestion box.',
+    awake: () => 'The suggestion box is awake!',
+    noSuggestions: () => 'You reached into the Suggestion Box, but there are no suggestions left! Alloy is perfect!',
+    gotSuggestion: (suggestion) => `You reached into the Suggestion Box, and pulled this out:\n${suggestion}`,
   },
   public: {
     noSuggestions: (userId) => `<@${userId}> reached into the Suggestion Box, but there are no suggestions left! Alloy is perfect!`,

@@ -50,5 +50,22 @@ const app = express();
     return res.send(messages.private.wrongPassword());
   }));
 
+  app.post('/draw-private', asyncHandler(async (req, res) => {
+    const password = req.body.text;
+    if (password === SECRET_PASSWORD) {
+      const suggestion = await getRandomSuggestion(db);
+      if (!suggestion) {
+        return res.send(messages.private.noSuggestions());
+      } else {
+        return res.send(messages.private.gotSuggestion(suggestion));
+      }
+    }
+    return res.send(messages.private.wrongPassword());
+  }));
+
+  app.post('/suggest-ping', asyncHandler(async (req, res) => {
+    return res.send(messages.private.awake());
+  }));
+
   app.listen(PORT);
 })();
